@@ -6,7 +6,7 @@ const display = document.querySelector('#weather');
 const button = document.querySelector('#btnWeather');
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    fetch('http://localhost:3030/weather?city=' + cityName.value).then((res) => {
+    fetch('/weather?city=' + cityName.value).then((res) => {
         res.json().then((data) => {
             display.innerHTML = JSON.stringify(data);
         })
