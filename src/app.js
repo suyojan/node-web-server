@@ -3,7 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const weather = require('./utils/weather');
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '../templates/views'));
